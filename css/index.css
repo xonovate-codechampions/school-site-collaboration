@@ -1,0 +1,18 @@
+*{
+    margin: o;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.hero{
+      background-color:navy ;
+      padding: 6px;
+      text-align: center;
+      color: white;
+}
