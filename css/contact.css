@@ -21,6 +21,7 @@
     flex-direction: column;
   padding: 60px 20px;
   background: white;
+  
 }
 
 .contact-info .container {
@@ -48,6 +49,7 @@
   padding: 60px 20px;
   text-align: center;
   background: #f9fafb;
+  
 }
 
 .contact-form .container {
@@ -69,8 +71,9 @@
 .contact-container{
     width: 100%;
     margin: auto !important;
+    justify-content: center;
     display: flex;
-    flex: 1 1 250px;
+    
 }
 
 .contact-form input,
@@ -111,4 +114,15 @@ footer {
   background: #1E3A8A;
   color: white;
   margin-top: 40px;
+  width: 100% ;
+  float: none;
+}
+
+@media (max-width: 768px) {
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+  
+
 }

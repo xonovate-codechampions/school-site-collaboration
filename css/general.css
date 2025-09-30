@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +34,7 @@ body{
 
 .hero{
   color: var(--font-color);
+  
 }
 
 nav {
@@ -43,11 +43,11 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 20px;
+  color: var(--secondary-color);
 }
 
-nav ul{
-  padding: 10px;
-}
+
 
 .logo{
   font-size: 24px;
@@ -64,6 +64,7 @@ nav ul{
 
 
 nav a, nav li{
+  font-weight: bolder;
   background: none;
   text-decoration: none;
   list-style: none;
@@ -79,15 +80,23 @@ footer {
   text-align: center;
 }
 
+nav a:hover{
+    color: var(--btn-color);
+    transition: background var(--transition-speed);
+  }
+
 
 
 
 @media (max-width: 768px) {
  .nav-links{
-  background: none;
+  position: absolute;
+  top: 30px;
+  gap: 5px !important;
+  right: 0;
+  padding: 20px;
+  background: none !important;
     display: none;
-    flex-direction: column;
-    width: 100%;
     text-align: right;
   }
 
@@ -101,16 +110,13 @@ footer {
     background-color: black;
     margin: 0.2px;
   }
-  nav .active{
-    display: flex;
-    text-wrap: wrap;
-    color: var(--hover-color);
-      background-color: var(--secondary-color);
+  .active{
+   display: flex;
+   flex-direction: column ;
+    color: var(--btn-color);
+      border-bottom: 2px solid var(--secondary-color);
   }
 
-  nav a:hover{
-    color: var(--hover-color);
-    transition: background var(--transition-speed);
-  }
+  
 }
->>>>>>> Stashed changes
+
