@@ -17,6 +17,7 @@
 
 
 .contact-info {
+  
     display: flex;
     flex-direction: column;
   padding: 60px 20px;
@@ -46,7 +47,7 @@
 
 
 .contact-form {
-  padding: 60px 20px;
+  padding: 40px;
   text-align: center;
   background: #f9fafb;
   
@@ -72,7 +73,8 @@
     width: 100%;
     margin: auto !important;
     justify-content: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     
 }
 
@@ -119,6 +121,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+  
   .contact-container{
     display: flex;
     flex-direction: column;
