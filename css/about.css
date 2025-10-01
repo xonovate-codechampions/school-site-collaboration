@@ -116,6 +116,7 @@
 .team h2{
     text-align: center;
     color: var(--btn-color);
+    margin-bottom: 20px;
 }
 .team-member {
   background: #fff;

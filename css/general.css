@@ -33,9 +33,19 @@ body{
 }
 
 .hero{
+  position: relative !important;
   color: var(--font-color);
-  
+  z-index: -1;
 }
+.inhero{
+  top: 330px;
+  left: 100px;
+  right: 200px;
+  position: absolute;
+  justify-content: center;
+  color: var(--secondary-color);
+}
+  
 
 nav {
   background: rgba(255, 255, 255, 0.178);
@@ -52,7 +62,7 @@ nav {
 .logo{
   font-size: 24px;
   font-weight: bold;
-  color: black;
+  color: var(--font-color);
   text-decoration: none;
 }
 
