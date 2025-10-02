@@ -1,4 +1,5 @@
 .hero {
+  height: 40vh !important;
   background: linear-gradient(rgba(30,58,138,0.7), rgba(30,58,138,0.7)),
               url("../assets/contact.jpg") no-repeat center center/cover;
   color: white;
