@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Enrollment</title>
+
+  <style>
+    /* ===== Button Style ===== */
+    #openFormBtn {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+    #openFormBtn:hover {
+      background: #0056b3;
+    }
+
+    /* ===== Modal Background ===== */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== Modal Box ===== */
+    .modal-content {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 450px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: pop 0.3s ease;
+      position: relative;
+    }
+
+    /* ===== Animation ===== */
+    @keyframes pop {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* ===== Close Button ===== */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    /* ===== Form Elements ===== */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      width: 100%;
+      outline: none;
+    }
+
+    button[type="submit"] {
+      background: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button[type="submit"]:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div style="text-align:center; margin-top:80px;">
+    <button id="openFormBtn">Enroll Now</button>
+  </div>
+
+
+  <div id="enrollModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Course Enrollment Form</h2>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="course">Select Course:</label>
+        <select id="course" required>
+          <option value="">-- Choose a Course --</option>
+          <option>Python Programming</option>
+          <option>Web Development</option>
+          <option>Robotics</option>
+          <option>C++ Programming</option>
+        </select>
+
+        <label for="message">Message (Optional):</label>
+        <textarea id="message" rows="3" placeholder="Any questions or comments?"></textarea>
+
+        <button type="submit">Submit Enrollment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== JavaScript ===== -->
+  <script>
+    const openBtn = document.getElementById('openFormBtn');
+    const modal = document.getElementById('enrollModal');
+    const closeBtn = document.querySelector('.close');
+
+    // Open modal
+    openBtn.onclick = () => {
+      modal.style.display = 'flex';
+    };
+
+    // Close modal
+    closeBtn.onclick = () => {
+      modal.style.display = 'none';
+    };
+
+    // Close when clicking outside modal content
+    window.onclick = (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+</html>
