@@ -11,6 +11,11 @@
       }
     }
 
+    #valid1, #valid2,#valid3{
+      display:none;
+      color:red;
+    }
+
     
 #openFormBtn {
       background: #007bff;
@@ -43,9 +48,9 @@
       background: #fff;
       padding: 30px;
       border-radius: 12px;
-      width: 90%;
+      width: 100%;
       max-width: 450px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       animation: pop 0.3s ease;
       position: relative;
     }
