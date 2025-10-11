@@ -15,12 +15,12 @@ const email = document.getElementById("email");
 const course = document.getElementById("course");
 
 name.onkeyup = () => {
-  console.log("vALUE ENTERED", name.value);
-  if (name.value.length <= 3) {
+  if (name.value.length <= 5) {
     name.style.border = "1px solid red";
     document.getElementById("valid1").style.display = "block";
-    document.getElementById("valid1").innerHTML =
-      `<small>"Name must be more than 3 characters"</small>`;
+    document.getElementById(
+      "valid1"
+    ).innerHTML = `<small>"Name must be more than 5 characters"</small>`;
   } else {
     document.getElementById("valid1").style.display = "none";
     name.style.border = "1px solid green";
