@@ -94,35 +94,6 @@ submitBtns.forEach((submitBtn) => {
     }
   });
 
-  // const Input = document.getElementById("password");
-
-  // Input.onkeyup = () => {
-  //   if (Input.value.length <= 5) {
-  //     Input.style.border = "1px solid red";
-  //     document.getElementById("valid2").style.display = "block";
-  //     document.getElementById(
-  //       "valid2"
-  //     ).innerHTML = `<small>"Password must be more than 5 characters"</small>`;
-  //   } else {
-  //     document.getElementById("valid2").style.display = "none";
-  //     Input.style.border = "1px solid green";
-  //   }
-  // };
-
-  // const password = getElementById("Password");
-
-  // password.onkeyup = () => {
-  //   if (password.value === Input.value) {
-  //     password.style.border = "1px solid green";
-  //     document.getElementById("valid3").style.display = "none";
-  //   } else {
-  //     password.style.border = "1px solid red";
-  //     document.getElementById("valid3").style.display = "block";
-  //     document.getElementById(
-  //       "valid3"
-  //     ).innerHTML = `<small>"Passwords do not match"</small>`;
-  //   }
-  // };
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmPassword");
   const valid2 = document.getElementById("valid2");
