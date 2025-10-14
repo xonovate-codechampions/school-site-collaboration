@@ -148,15 +148,6 @@ submitBtns.forEach((submitBtn) => {
     }
   });
 
-  password.onkeyup = () => {
-    if (password.value !== confirmPassword.value) {
-      valid3.style.display = "block";
-      confirmPassword.style.border = "1px solid red";
-    } else {
-      valid3.style.display = "none";
-      confirmPassword.style.border = "1px solid green";
-    }
-  };
 });
 
 // document.getElementById("form").addEventListener("submit", function (e) {
