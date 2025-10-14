@@ -75,6 +75,23 @@ label {
   color: #333;
 }
 
+.ineye {
+  position: relative;
+  width: 100%;
+}
+
+.ineye .toggle-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+
 input,
 select,
 textarea {

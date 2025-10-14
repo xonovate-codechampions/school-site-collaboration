@@ -43,122 +43,120 @@ valids.forEach((valid4) => {
 });
 
 submitBtns.forEach((submitBtn) => {
-submitBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (name.value === "") {
-    name.style.border = "1px solid red";
-  } else {
-    name.style.border = "1px solid green";
-  }
-valids.forEach((valid4) => {
-  if (email.value === "" || !email.value.includes("@xonovate.com")) {
-    email.style.border = "1px solid red";
-    valid4.style.display = "block";
-  } else {
-    email.style.border = "1px solid green";
-    valid4.style.display = "none";
-  }
-});
+  submitBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (name.value === "") {
+      name.style.border = "1px solid red";
+    } else {
+      name.style.border = "1px solid green";
+    }
+    valids.forEach((valid4) => {
+      if (email.value === "" || !email.value.includes("@xonovate.com")) {
+        email.style.border = "1px solid red";
+        valid4.style.display = "block";
+      } else {
+        email.style.border = "1px solid green";
+        valid4.style.display = "none";
+      }
+    });
 
-  next.addEventListener("keyup", () => {
-  if (next.value === "") {
-    next.style.border = "1px solid red";
-  }else {
-    next.style.border = "1px solid green";
-  }
+    next.addEventListener("keyup", () => {
+      if (next.value === "") {
+        next.style.border = "1px solid red";
+      } else {
+        next.style.border = "1px solid green";
+      }
+    });
+    if (next.value === "") {
+      next.style.border = "1px solid red";
+    } else {
+      next.style.border = "1px solid green";
+    }
+    if (email.value !== "" && next.value !== "") {
+      window.location.href = "home.html";
+    }
+
+    if (course.value === "") {
+      valid1.style.display = "block";
+    } else {
+      valid1.style.display = "none";
+    }
+
+    const Input = document.getElementById("password");
+    if (
+      course.value !== "" &&
+      Input.value.length > 5 &&
+      password.value === confirmPassword.value
+    ) {
+      window.location.href = "home.html";
+    } else {
+      return false;
+    }
   });
-  if (next.value === "") {
-    next.style.border = "1px solid red";
-  }else {
-    next.style.border = "1px solid green";
-  }
-  if (email.value !== "" && next.value !== "") {
-    window.location.href = "home.html";
-  }
 
-  if (course.value === "") {
-    valid1.style.display = "block";
-  } else {
-    valid1.style.display = "none";
-  }
+  // const Input = document.getElementById("password");
 
-  
+  // Input.onkeyup = () => {
+  //   if (Input.value.length <= 5) {
+  //     Input.style.border = "1px solid red";
+  //     document.getElementById("valid2").style.display = "block";
+  //     document.getElementById(
+  //       "valid2"
+  //     ).innerHTML = `<small>"Password must be more than 5 characters"</small>`;
+  //   } else {
+  //     document.getElementById("valid2").style.display = "none";
+  //     Input.style.border = "1px solid green";
+  //   }
+  // };
 
+  // const password = getElementById("Password");
 
+  // password.onkeyup = () => {
+  //   if (password.value === Input.value) {
+  //     password.style.border = "1px solid green";
+  //     document.getElementById("valid3").style.display = "none";
+  //   } else {
+  //     password.style.border = "1px solid red";
+  //     document.getElementById("valid3").style.display = "block";
+  //     document.getElementById(
+  //       "valid3"
+  //     ).innerHTML = `<small>"Passwords do not match"</small>`;
+  //   }
+  // };
+  const password = document.getElementById("password");
+  const confirmPassword = document.getElementById("confirmPassword");
+  const valid2 = document.getElementById("valid2");
+  const valid3 = document.getElementById("valid3");
 
-  const Input = document.getElementById("password");
-  if (course.value !== "" && Input.value.length > 5 && password.value === confirmPassword.value) {
-    window.location.href = "home.html";
-  } else {
-    return false;
-  }
-  
-});
+  password.addEventListener("keyup", () => {
+    if (password.value.length <= 5) {
+      valid2.style.display = "block";
+      password.style.border = "1px solid red";
+    } else {
+      valid2.style.display = "none";
+      password.style.border = "1px solid green";
+    }
+  });
 
-// const Input = document.getElementById("password");
+  confirmPassword.addEventListener("keyup", () => {
+    if (confirmPassword.value === password.value) {
+      valid3.style.display = "none";
+      confirmPassword.style.border = "1px solid green";
+    } else {
+      valid3.style.display = "block";
+      confirmPassword.style.border = "1px solid red";
+    }
+  });
 
-// Input.onkeyup = () => {
-//   if (Input.value.length <= 5) {
-//     Input.style.border = "1px solid red";
-//     document.getElementById("valid2").style.display = "block";
-//     document.getElementById(
-//       "valid2"
-//     ).innerHTML = `<small>"Password must be more than 5 characters"</small>`;
-//   } else {
-//     document.getElementById("valid2").style.display = "none";
-//     Input.style.border = "1px solid green";
-//   }
-// };
-
-// const password = getElementById("Password");
-
-// password.onkeyup = () => {
-//   if (password.value === Input.value) {
-//     password.style.border = "1px solid green";
-//     document.getElementById("valid3").style.display = "none";
-//   } else {
-//     password.style.border = "1px solid red";
-//     document.getElementById("valid3").style.display = "block";
-//     document.getElementById(
-//       "valid3"
-//     ).innerHTML = `<small>"Passwords do not match"</small>`;
-//   }
-// };
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirmPassword");
-const valid2 = document.getElementById("valid2");
-const valid3 = document.getElementById("valid3");
-
-password.addEventListener("keyup", () => {
-  if (password.value.length <= 5) {
-    valid2.style.display = "block";
-    password.style.border = "1px solid red";
-  } else {
-    valid2.style.display = "none";
-    password.style.border = "1px solid green";
-  }
-});
-
-confirmPassword.addEventListener("keyup", () => {
-  if (confirmPassword.value === password.value) {
-    valid3.style.display = "none";
-    confirmPassword.style.border = "1px solid green";
-  } else {
-    valid3.style.display = "block";
-    confirmPassword.style.border = "1px solid red";
-  }
-});
-
-password.onkeyup = () => {
-if (password.value !== confirmPassword.value) {
-  valid3.style.display = "block";
-  confirmPassword.style.border = "1px solid red";
-} else {
-  valid3.style.display = "none";
-  confirmPassword.style.border = "1px solid green";
-}
-
-};
+  password.onkeyup = () => {
+    if (password.value !== confirmPassword.value) {
+      valid3.style.display = "block";
+      confirmPassword.style.border = "1px solid red";
+    } else {
+      valid3.style.display = "none";
+      confirmPassword.style.border = "1px solid green";
+    }
+  };
 });
 
 // document.getElementById("form").addEventListener("submit", function (e) {
