@@ -31,6 +31,7 @@
 }
 
 .modal {
+  /* padding: 20px; */
   display: none;
   position: fixed;
   z-index: 1000;
@@ -115,4 +116,13 @@ button[type="submit"] {
 }
 button[type="submit"]:hover {
   background: #607092;
+}
+
+
+@media screen and (max-width: 500px) {
+  .modal-content {
+    padding: 20px;
+    width: 90%;
+  }
+  
 }

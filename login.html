@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | School Website</title>
+    <link rel="stylesheet" href="css/enroll.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="assets/icon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="modal-content" style="margin: auto; top: 300px">
+      <h2>Login</h2>
+      <form class="form" novalidate>
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <div class="valid4" style="display: none">
+          <small style="color: red"
+            >Email must be a valid xonovate.com email</small
+          >
+        </div>
+
+        <label>Password</label>
+        <div class="password-box">
+          <div class="ineye">
+            <input
+              type="password"
+              class="password"
+              id="loginPassword"
+              placeholder="Create password"
+            />
+            <button type="button" class="toggle-btn">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <input type="checkbox" id="confirmPassword" style="display: none" />
+          <input type="checkbox" id="name" style="display: none" />
+          <input type="checkbox" id="valid1" style="display: none" />
+
+          <input type="checkbox" id="password" style="display: none" />
+        </div>
+        <div id="course" style="display: none"></div>
+        <button type="submit" class="submitbtn">Login</button>
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+      </form>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>

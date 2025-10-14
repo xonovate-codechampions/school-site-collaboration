@@ -73,7 +73,7 @@ submitBtns.forEach((submitBtn) => {
       next.style.border = "1px solid green";
     }
     if (email.value !== "" && next.value !== "") {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     }
 
     if (course.value === "") {
@@ -88,7 +88,7 @@ submitBtns.forEach((submitBtn) => {
       Input.value.length > 5 &&
       password.value === confirmPassword.value
     ) {
-      window.location.href = "home.html";
+      window.location.href = "index.html";
     } else {
       return false;
     }
@@ -178,12 +178,12 @@ submitBtns.forEach((submitBtn) => {
 //         passwordError.style.display = "none";
 //     }
 
-//     window.location.href = "home.html";
+//     window.location.href = "index.html";
 //   });
 
 // const form = document.getElementById("form");
 
 // form.addEventListener("submit", (e) => {
 //   e.preventDefault();
-//   window.location.href = "home.html";
+//   window.location.href = "index.html";
 // });
