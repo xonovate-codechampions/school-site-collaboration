@@ -4,6 +4,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -21,6 +23,18 @@ body {
   text-align: center;
 }
 
+.log{
+  display: flex;
+  gap: 15px;
+}
+
+.log .login{
+  color: rgb(3, 128, 3);
+}
+
+.log .register{
+  color: rgb(146, 47, 47);
+}
 
 .hero h1 {
   font-weight: bolder;

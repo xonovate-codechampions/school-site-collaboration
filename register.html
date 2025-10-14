@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | School Website</title>
+    <link rel="stylesheet" href="css/enroll.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="assets/icon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="modal-content" style="margin: auto; top: 80px">
+      <h2>Create an Account</h2>
+      <form class="form" novalidate>
+        <label>Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name" />
+
+        <label>Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email eg. user@xonovate.com"
+        />
+        <div class="valid4" style="display: none">
+          <small style="color: red"
+            >Email must be a valid xonovate.com email</small
+          >
+        </div>
+        <input type="checkbox" id="loginPassword" style="display: none" />
+
+        <label for="course">Select Course:</label>
+        <select id="course">
+          <option value="">-- Choose a Course --</option>
+          <option>Python Programming</option>
+          <option>Web Development</option>
+          <option>Robotics</option>
+        </select>
+        <div id="valid1"><small>Select a course</small></div>
+
+        <label>Password</label>
+        <div class="password-box">
+          <div class="ineye">
+            <input
+              type="password"
+              class="password"
+              id="password"
+              placeholder="Create password"
+            />
+            <button type="button" class="toggle-btn">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div id="valid2">
+            <small>Password must be more than 5 characters</small>
+          </div>
+        </div>
+
+        <label>Confirm Password</label>
+        <div class="password-box">
+          <div class="ineye">
+            <input
+              type="password"
+              class="password"
+              id="confirmPassword"
+              placeholder="Confirm password"
+            />
+            <button type="button" class="toggle-btn">
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+          <div id="valid3"><small>Passwords do not match</small></div>
+        </div>
+
+        <button type="submit" class="submitbtn">Register</button>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+      </form>
+    </div>
+
+    <script src="auth.js"></script>
+  </body>
+</html>
