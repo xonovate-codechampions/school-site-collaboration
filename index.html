@@ -6,6 +6,7 @@
     <title>Login | School Website</title>
     <link rel="stylesheet" href="css/enroll.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="assets/icon.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,6 +18,7 @@
       <form class="form" novalidate>
         <label>Email</label>
         <input type="email" id="email" placeholder="Enter your email" />
+        <div class="valid4" style="display: none"><small style="color: red;">Email must be a valid xonovate.com email</small></div>
 
         <label>Password</label>
         <div class="password-box">
@@ -28,6 +30,7 @@
           />
           <input type="checkbox" id="password" style="display: none" />
           <input type="checkbox" id="confirmPassword" style="display: none" />  
+          <input type="checkbox" id="name" style="display: none" />  
           <input type="checkbox" id="valid1" style="display: none" />  
           <button type="button" class="toggle-btn">
             <i class="fa-solid fa-eye"></i>

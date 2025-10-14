@@ -19,6 +19,8 @@ const course = document.getElementById("course");
 const valid1 = document.getElementById("valid1");
 const email = document.getElementById("email");
 const next = document.getElementById("loginPassword");
+const name = document.getElementById("name");
+const valids = document.querySelectorAll(".valid4");
 
 course.onchange = () => {
   if (course.value === "") {
@@ -28,17 +30,35 @@ course.onchange = () => {
   }
 };
 
+valids.forEach((valid4) => {
+  email.onkeyup = () => {
+    if (email.value === "" || !email.value.includes("@xonovate.com")) {
+      email.style.border = "1px solid red";
+      valid4.style.display = "block";
+    } else {
+      email.style.border = "1px solid green";
+      valid4.style.display = "none";
+    }
+  };
+});
+
 submitBtns.forEach((submitBtn) => {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
-
-  email.addEventListener("keyup", () => {
-  if (email.value === "") {
-    email.style.border = "1px solid red";
-  }else {
-    email.style.border = "1px solid green";
+  if (name.value === "") {
+    name.style.border = "1px solid red";
+  } else {
+    name.style.border = "1px solid green";
   }
-  });
+valids.forEach((valid4) => {
+  if (email.value === "" || !email.value.includes("@xonovate.com")) {
+    email.style.border = "1px solid red";
+    valid4.style.display = "block";
+  } else {
+    email.style.border = "1px solid green";
+    valid4.style.display = "none";
+  }
+});
 
   next.addEventListener("keyup", () => {
   if (next.value === "") {

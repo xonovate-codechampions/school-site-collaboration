@@ -6,6 +6,7 @@
     <title>Register | School Website</title>
     <link rel="stylesheet" href="css/enroll.css" />
     <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="assets/icon.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -16,12 +17,14 @@
       <h2>Create an Account</h2>
       <form class="form" novalidate>
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name" />
+        <input type="text" id="name" placeholder="Enter your full name" />
+
 
         <label>Email</label>
-        <input type="email"  placeholder="Enter your email" />
+        <input type="email" id="email" placeholder="Enter your email eg. user@xonovate.com" />
+        <div class="valid4" style="display: none"><small style="color: red;">Email must be a valid xonovate.com email</small></div>
         <input type="checkbox" id="loginPassword" style="display: none" />
-        <input type="checkbox" id="email" style="display: none" />
+        
 
         <label for="course">Select Course:</label>
         <select id="course">
