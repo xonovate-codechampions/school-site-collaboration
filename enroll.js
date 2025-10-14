@@ -13,7 +13,7 @@ name.onkeyup = () => {
     document.getElementById("valid1").style.display = "block";
     document.getElementById(
       "valid1"
-    ).innerHTML = `<small>"Name must be more than 5 characters"</small>`;
+    ).innerHTML = `<small>Name must be more than 5 characters</small>`;
   } else {
     document.getElementById("valid1").style.display = "none";
     name.style.border = "1px solid green";
