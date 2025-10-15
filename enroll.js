@@ -45,13 +45,7 @@ form.onsubmit = (event) => {
   // );
   // modal.style.display = "none";
 
-<<<<<<< Updated upstream
-  name.value = "";
-  email.value = "";
-  course.value = "";
-=======
   
->>>>>>> Stashed changes
 };
 
 openBtn.onclick = () => {
@@ -87,22 +81,15 @@ form.addEventListener("submit", (e) => {
     You have successfully enrolled in <strong>${course}</strong>.<br>
     A confirmation email will be sent to <strong>${email}</strong>.
   `;
-<<<<<<< Updated upstream
-=======
    
 
->>>>>>> Stashed changes
 
   alertBox.style.display = "flex";
 });
 
 closeAlert.onclick = () => {
   alertBox.style.display = "none";
-<<<<<<< Updated upstream
-  form.reset();
-=======
   name.value = "";
   email.value = "";
   course.value = "";
->>>>>>> Stashed changes
 };
