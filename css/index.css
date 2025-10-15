@@ -29,11 +29,15 @@ body {
 }
 
 .log .login{
-  color: rgb(3, 128, 3);
+  background-color: rgb(3, 128, 3);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .log .register{
-  color: rgb(146, 47, 47);
+  background-color: rgb(146, 47, 47);
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .hero h1 {
@@ -182,4 +186,14 @@ body {
 
 .card .btn:hover {
   background: #2563eb;
+}
+
+
+@media (max-width: 544px) {
+  
+
+  .log{
+    flex-direction: column;
+    gap: 20px;
+  }
 }

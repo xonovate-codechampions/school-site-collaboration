@@ -23,11 +23,11 @@ name.onkeyup = () => {
 form.onsubmit = (event) => {
   event.preventDefault();
 
-  // if (name.value === "") {
-  //   document.getElementById("valid1").style.display = "block";
-  // } else {
-  //   document.getElementById("valid1").style.display = "none";
-  // }
+  if (name.value === "") {
+    document.getElementById("valid1").style.display = "block";
+  } else {
+    document.getElementById("valid1").style.display = "none";
+  }
 
   if (email.value === "") {
     document.getElementById("valid2").style.display = "block";
@@ -45,9 +45,9 @@ form.onsubmit = (event) => {
   // );
   // modal.style.display = "none";
 
-  // name.value = "";
-  // email.value = "";
-  // course.value = "";
+  name.value = "";
+  email.value = "";
+  course.value = "";
 };
 
 openBtn.onclick = () => {
@@ -62,4 +62,32 @@ window.onclick = (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
+};
+
+
+
+const alertBox = document.getElementById("customAlert");
+const alertMessage = document.getElementById("alertMessage");
+const closeAlert = document.getElementById("closeAlert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); 
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const course = document.getElementById("course").value;
+
+  
+  alertMessage.innerHTML = `
+    Hello <strong>${name}</strong>! <br>
+    You have successfully enrolled in <strong>${course}</strong>.<br>
+    A confirmation email will be sent to <strong>${email}</strong>.
+  `;
+
+  alertBox.style.display = "flex";
+});
+
+closeAlert.onclick = () => {
+  alertBox.style.display = "none";
+  form.reset();
 };

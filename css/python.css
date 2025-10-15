@@ -88,6 +88,46 @@ h2 {
   color: var(--btn-color);
 }
 
+
+.alert {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alert-box {
+  background: #fff;
+  color: #333;
+  border-radius: 12px;
+  padding: 25px 40px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  animation: popUp 0.3s ease;
+}
+
+.alert-box button {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.alert-box button:hover {
+  background: #218838;
+}
+
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 @media (max-width: 850px) {
   .cards {
     display: flex;
