@@ -53,7 +53,7 @@ body {
 .programs h2 {
   font-size: 32px;
   margin-bottom: 30px;
-  color: var(--font-color);
+  color: var(--btn-color);
 }
 
 .program-cards {
