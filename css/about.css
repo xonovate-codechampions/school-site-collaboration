@@ -130,6 +130,11 @@
   transform: translateY(-8px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
+
+.team-member p{
+  color:var(--btn-color);
+}
+
 .team-member img {
   width: 120px;
   border-radius: 50%;
