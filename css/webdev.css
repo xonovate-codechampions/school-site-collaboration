@@ -1,6 +1,6 @@
 .hero {
-  background: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)),
-    url(../assets/webdev.avif) no-repeat center center/cover;
+  background: linear-gradient(rgba(30, 58, 138, 0.5), rgba(30, 58, 138, 0.5)),
+    url(../assets/webdev.avif) no-repeat center center/cover !important;
 }
 
 .intro {
