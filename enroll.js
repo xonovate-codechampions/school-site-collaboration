@@ -45,7 +45,6 @@ form.onsubmit = (event) => {
   // );
   // modal.style.display = "none";
 
-  
 };
 
 openBtn.onclick = () => {
